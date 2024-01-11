@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#D9D9D9"
+    tools:context=".Data">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Line Chart"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:textColor="#0B3D6D"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.db.williamchart.view.LineChartView
+            android:id="@+id/lineChart"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="100dp"
+            app:chart_axis="none"
+            app:chart_gridEffect="dotted"
+            app:chart_labelsColor="#447884"
+            android:background="#0B3D6D"
+            app:chart_labelsSize="15dp"
+            app:chart_lineColor="@color/black"
+            app:chart_lineThickness="6dp"
+            app:chart_smoothLine="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvChartData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/lineChart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Line Chart"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bar Chart"
+            android:textSize="35dp"
+            android:layout_marginTop="150dp"
+            android:textStyle="bold"
+            android:textColor="#0B3D6D"
+            app:layout_constraintTop_toBottomOf="@+id/lineChart"
+            android:textAlignment="center"/>
+
+        <com.db.williamchart.view.BarChartView
+            android:id="@+id/barChart"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="250dp"
+            app:chart_axis="x"
+            app:chart_barsColor="#0B3D6D"
+            app:chart_barsRadius="4dp"
+            app:chart_labelsColor="#0D47A1"
+            app:chart_labelsSize="10sp"
+            app:chart_spacing="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineChart"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</FrameLayout>
